@@ -1,0 +1,118 @@
+@import "../abstracts/variables";
+@import "../abstracts/mixins";
+
+.vp-header {
+  position: sticky;
+  top: 0;
+  z-index: 1030;
+  height: $vp-header-height;
+  background: rgba($vp-surface, 0.92);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid $vp-border;
+
+  .navbar {
+    height: 100%;
+  }
+
+  &__brand {
+    @include flex-center(0.5rem);
+    font-family: $vp-font-heading;
+    font-weight: 700;
+    font-size: 1.35rem;
+    color: $vp-dark;
+
+    i {
+      color: $vp-primary;
+      font-size: 1.2rem;
+    }
+
+    &:hover {
+      color: $vp-dark;
+    }
+  }
+
+  &__nav {
+    .nav-link {
+      color: $vp-body-color;
+      font-weight: 500;
+      font-size: 0.9rem;
+      padding: 0.5rem 0.8rem !important;
+
+      &:hover,
+      &.active {
+        color: $vp-primary;
+      }
+    }
+  }
+
+  &__search {
+    position: relative;
+    min-width: 240px;
+
+    i {
+      position: absolute;
+      left: 14px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: $vp-muted;
+      font-size: 0.85rem;
+    }
+
+    input {
+      padding-left: 2.4rem;
+      background: $vp-body-bg;
+      border: 1px solid $vp-border;
+      border-radius: 999px;
+      padding-block: 0.57rem;
+
+      &:focus {
+        background: $vp-surface;
+        box-shadow: 0 0 0 3px rgba($vp-primary, 0.12);
+        border-color: $vp-primary;
+      }
+    }
+  }
+
+  &__cta {
+    background: $vp-primary;
+    border-color: $vp-primary;
+    font-weight: 600;
+    padding-inline: 1.5rem;
+    color: $white;
+
+    &:hover {
+      background: $vp-primary-dark;
+      border-color: $vp-primary-dark;
+      color: $white;
+    }
+  }
+
+  .navbar-toggler {
+    border: none;
+
+    &:focus {
+      box-shadow: none;
+    }
+  }
+
+  @media screen and (max-width: 992px) {
+    .navbar-collapse {
+      background: #fff;
+      position: absolute;
+      width: 100%;
+      top: 100%;
+      left: 0;
+      padding: 0;
+
+      .navbar-nav {
+        margin-left: 0 !important;
+        padding: 0 20px;
+      }
+
+      &>div {
+        margin-top: 0 !important;
+        padding: 20px;
+      }
+    }
+  }
+}

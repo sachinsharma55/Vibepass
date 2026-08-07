@@ -1,0 +1,31 @@
+@import "../abstracts/variables";
+@import "../abstracts/mixins";
+
+.why-choose {
+  @include section-spacing(4.5rem, 4.5rem);
+  background: $vp-surface;
+  border-top: 1px solid $vp-border;
+  border-bottom: 1px solid $vp-border;
+
+  &__header {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+
+  &__row {
+    [class*=col-] {
+      &:nth-child(2) {
+        .feature-card__icon {
+          background: rgba(#38BDF8, 0.16);
+          color: #0EA5E9;
+        }
+      }
+      &:nth-child(3) {
+        .feature-card__icon {
+          background: rgba($vp-accent-orange, 0.16);
+          color: darken($vp-accent-orange, 8%);
+        }
+      }
+    }
+  }
+}

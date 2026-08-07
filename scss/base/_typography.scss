@@ -1,0 +1,39 @@
+@import "../abstracts/variables";
+
+body {
+  font-family: $vp-font-body;
+  font-size: 1rem;
+  line-height: 1.65;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $vp-font-heading;
+  color: $vp-dark;
+  line-height: 1.25;
+}
+
+h1 { font-weight: 700; }
+h2 { font-weight: 700; }
+
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: $vp-primary;
+}
+
+.text-muted-vp {
+  color: $vp-muted;
+}
+
+.section-title {
+  font-size: clamp(1.75rem, 2.6vw, 2.25rem);
+  margin-bottom: 0.5rem;
+}
+
+.section-subtitle {
+  color: $vp-muted;
+  font-size: 1.05rem;
+  margin-bottom: 0;
+}

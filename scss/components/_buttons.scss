@@ -1,0 +1,71 @@
+@import "../abstracts/variables";
+
+.btn {
+  font-weight: 600;
+  font-size: 0.95rem;
+  padding: 0.6rem 1.5rem;
+  transition: all 0.2s ease;
+}
+
+.btn-primary {
+  background: $vp-primary;
+  border-color: $vp-primary;
+
+  &:hover,
+  &:focus {
+    background: $vp-primary-dark;
+    border-color: $vp-primary-dark;
+    transform: translateY(-1px);
+  }
+}
+
+.btn-outline-primary {
+  color: $vp-primary;
+  border-color: $vp-primary;
+
+  &:hover {
+    background: $vp-primary;
+    border-color: $vp-primary;
+  }
+}
+
+.btn-light-vp {
+  background: $vp-surface;
+  color: $vp-dark;
+  border: 1px solid $vp-border;
+  border-radius: $vp-radius-pill;
+  font-weight: 600;
+
+  &:hover {
+    background: $vp-primary-light;
+    color: $vp-primary;
+  }
+}
+
+.btn-sm-pill {
+  border-radius: $vp-radius-pill;
+  padding: 0.4rem 1.1rem;
+  font-size: 0.85rem;
+}
+
+// Circular slider prev/next arrows shared by Slick carousels
+.vp-slider-arrow {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: $vp-surface;
+  border: 1px solid $vp-border;
+  color: $vp-dark;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: $vp-shadow-sm;
+  transition: all 0.2s ease;
+  z-index: 2;
+
+  &:hover {
+    background: $vp-primary;
+    color: #fff;
+    border-color: $vp-primary;
+  }
+}

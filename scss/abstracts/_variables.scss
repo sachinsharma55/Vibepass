@@ -1,0 +1,81 @@
+// =========================================================
+// VibePass — Global design tokens
+// Override these BEFORE importing Bootstrap in main.scss
+// =========================================================
+
+// ---- Brand palette -----------------------------------------------
+$vp-primary:        #4F46E5; // indigo — buttons, links, brand
+$vp-primary-dark:    #3A32B0;
+$vp-primary-light:  #EEF0FF;
+
+$vp-accent-orange:  #FB923C; // gradient headline / badges
+$vp-accent-pink:    #F472B6; // gradient headline
+$vp-accent-purple:  #8B5CF6; // gradient headline
+
+$vp-dark:            #14142B; // headings / footer text
+$vp-body-color:      #4B4B63; // paragraph text
+$vp-muted:            #8A8AA3;
+
+$vp-body-bg:          #F8F8FC;
+$vp-surface:          #FFFFFF;
+$vp-border:            #E9E9F2;
+
+$vp-success:          #22C55E;
+$vp-danger:            #EF4444;
+$vp-warning-star:  #F5A623; // rating stars
+
+// ---- Gradients ------------------------------------------------------
+$vp-gradient-headline: linear-gradient(90deg, $vp-accent-orange 0%, $vp-accent-pink 55%, $vp-accent-purple 100%);
+$vp-gradient-cta:          linear-gradient(120deg, #4F46E5 0%, #6D28D9 100%);
+$vp-gradient-overlay:  linear-gradient(180deg, rgba(20, 20, 43, 0.75) 0%, rgba(20, 20, 43, 0.35) 45%, rgba(248, 248, 252, 1) 100%);
+
+// ---- Typography -------------------------------------------------------
+$vp-font-heading:  "Poppins", sans-serif;
+$vp-font-body:        "Inter", sans-serif;
+
+// ---- Spacing / radius / shadow ------------------------------------
+$vp-radius-sm:  8px;
+$vp-radius-md: 14px;
+$vp-radius-lg: 22px;
+$vp-radius-pill: 999px;
+
+$vp-shadow-sm: 0 2px 8px rgba(20, 20, 43, 0.06);
+$vp-shadow-md: 0 12px 30px rgba(20, 20, 43, 0.10);
+$vp-shadow-lg: 0 20px 45px rgba(79, 70, 229, 0.18);
+
+$vp-header-height: 76px;
+
+// =========================================================
+// Bootstrap variable overrides (consumed by node_modules/bootstrap)
+// =========================================================
+$primary:       $vp-primary;
+$body-bg:         $vp-body-bg;
+$body-color:     $vp-body-color;
+$font-family-base: $vp-font-body;
+$headings-font-family: $vp-font-heading;
+$headings-color: $vp-dark;
+$headings-font-weight: 600;
+$border-radius:      $vp-radius-sm;
+$border-radius-lg:  $vp-radius-md;
+$btn-border-radius: $vp-radius-pill;
+$btn-border-radius-lg: $vp-radius-pill;
+$input-border-radius: $vp-radius-sm;
+$enable-negative-margins: true;
+
+$theme-colors: (
+  "primary": $vp-primary,
+  "secondary": $vp-muted,
+  "success": $vp-success,
+  "danger": $vp-danger,
+  "light": $vp-body-bg,
+  "dark": $vp-dark
+);
+
+$grid-gutter-width: 1.75rem;
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px,
+  xxl: 1280px
+);

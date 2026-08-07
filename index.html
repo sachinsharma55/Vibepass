@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VibePass — Unforgettable Experiences, Just a Click Away</title>
+  <meta name="description"
+    content="Find tickets to the hottest concerts, sports events, workshops, festivals and theater shows." />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700&display=swap"
+    rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Slick Carousel -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" />
+
+  <!-- Compiled project CSS (Bootstrap + our nested SCSS) -->
+  <link rel="stylesheet" href="css/main.css" />
+</head>
+
+<body>
+
+  <!-- ============ HEADER ============ -->
+  <header class="vp-header">
+    <nav class="navbar navbar-expand-lg h-100">
+      <div class="container-xxl">
+        <a class="vp-header__brand" href="#"><i class="fa-solid fa-bolt"></i>VibePass</a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#vpNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="vpNav">
+          <ul class="navbar-nav vp-header__nav me-auto ms-3">
+            <li class="nav-item"><a class="nav-link active" href="#">Concerts</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Sports</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Workshops</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Festivals</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Theater</a></li>
+          </ul>
+
+          <div class="d-flex align-items-center gap-3 mt-3 mt-lg-0">
+            <div class="vp-header__search d-none d-md-block">
+              <i class="fa-solid fa-magnifying-glass"></i>
+              <input type="search" class="form-control" placeholder="Search events...">
+            </div>
+            <button class="btn vp-header__cta">Sign Up</button>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ============ HERO ============ -->
+  <section class="hero">
+    <div class="hero__media">
+      <video class="js-hero-video" autoplay muted loop playsinline poster="images/hero-poster.png">
+        <source src="videos/hero-bg.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div class="hero__overlay"></div>
+
+    <div class="hero__content container-xxl">
+      <h1 class="hero__title">
+        <span>Unforgettable Experiences,</span><br>
+        Just a Click Away.
+      </h1>
+      <p class="hero__subtitle">Find tickets to the hottest concerts, sports events, workshops, and more.</p>
+
+      <form class="hero-search d-flex flex-wrap align-items-center gap-2 gap-md-0">
+        <div class="hero-search__field">
+          <img src="icons/hero_icon01.svg" width="16" alt="icon">
+          <select class="form-select">
+            <option selected>Event Type</option>
+            <option>Concerts</option>
+            <option>Sports</option>
+            <option>Workshops</option>
+            <option>Festivals</option>
+            <option>Theater</option>
+          </select>
+        </div>
+        <div class="hero-search__divider d-none d-md-block"></div>
+        <div class="hero-search__field">
+          <img src="icons/hero_Icon02.svg" width="16" alt="icon">
+          <input type="text" placeholder="Location">
+        </div>
+        <div class="hero-search__divider d-none d-md-block"></div>
+        <div class="hero-search__field">
+          <img src="icons/hero_Icon03.svg" width="16" alt="icon">
+          <input type="date" placeholder="mm/dd/yyyy">
+        </div>
+        <button type="submit" class="btn-search">Search</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- ============ CATEGORIES ============ -->
+  <section class="categories">
+    <div class="container-xxl">
+      <div class="row row-cols-3 row-cols-md-5 g-4">
+        <div class="col">
+          <a class="categories__item" href="#">
+            <span class="categories__item-icon"><img src="icons/cat_icon01.svg" alt=""></span>
+            <span class="categories__item-label">Concerts</span>
+          </a>
+        </div>
+        <div class="col">
+          <a class="categories__item" href="#">
+            <span class="categories__item-icon"><img src="icons/cat_icon02.svg" alt=""></span>
+            <span class="categories__item-label">Sports</span>
+          </a>
+        </div>
+        <div class="col">
+          <a class="categories__item" href="#">
+            <span class="categories__item-icon"><img src="icons/cat_icon03.svg" alt=""></span>
+            <span class="categories__item-label">Workshops</span>
+          </a>
+        </div>
+        <div class="col">
+          <a class="categories__item" href="#">
+            <span class="categories__item-icon"><img src="icons/cat_icon04.svg" alt=""></span>
+            <span class="categories__item-label">Festivals</span>
+          </a>
+        </div>
+        <div class="col">
+          <a class="categories__item" href="#">
+            <span class="categories__item-icon"><img src="icons/cat_icon05.svg" alt=""></span>
+            <span class="categories__item-label">Theater</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ TRENDING NEAR YOU ============ -->
+  <section class="trending container-xxl">
+    <div class="trending__header">
+      <div>
+        <h2 class="section-title">Trending Near You</h2>
+        <p class="section-subtitle">Grab tickets before they sell out.</p>
+      </div>
+      <a href="#" class="trending__view-all">View All <i class="fa-solid fa-arrow-right"></i></a>
+    </div>
+
+    <div class="vp-slider-wrap">
+      <button class="vp-slider-arrow vp-slider-arrow--prev js-trending-prev" aria-label="Previous">
+        <i class="fa-solid fa-chevron-left"></i>
+      </button>
+
+      <div class="js-trending-slider">
+
+        <div class="event-card">
+          <div class="event-card__img">
+            <span class="event-card__badge event-card__badge--selling">Selling Fast</span>
+            <img src="images/event-concert.png" alt="Neon Nights Tour concert crowd">
+          </div>
+          <div class="event-card__body">
+            <div class="event-card__date"><i class="fa-regular fa-calendar"></i>OCT 15 &bull; 8:00 PM</div>
+            <h3 class="event-card__title">Neon Nights Tour</h3>
+            <p class="event-card__venue">Madison Square Garden</p>
+            <div class="event-card__footer">
+              <div class="event-card__price">From<strong>$89</strong></div>
+              <a href="#" class="btn btn-light-vp btn-sm-pill">Book Now</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="event-card">
+          <div class="event-card__img">
+            <img src="images/event-sports.png" alt="City Rivals Derby basketball game">
+          </div>
+          <div class="event-card__body">
+            <div class="event-card__date"><i class="fa-regular fa-calendar"></i>OCT 18 &bull; 7:30 PM</div>
+            <h3 class="event-card__title">City Rivals Derby</h3>
+            <p class="event-card__venue">Downtown Arena</p>
+            <div class="event-card__footer">
+              <div class="event-card__price">From<strong>$45</strong></div>
+              <a href="#" class="btn btn-light-vp btn-sm-pill">Book Now</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="event-card">
+          <div class="event-card__img">
+            <img src="images/event-workshop.png" alt="Digital Art Masterclass workshop">
+          </div>
+          <div class="event-card__body">
+            <div class="event-card__date"><i class="fa-regular fa-calendar"></i>OCT 22 &bull; 10:00 AM</div>
+            <h3 class="event-card__title">Digital Art Masterclass</h3>
+            <p class="event-card__venue">Creative Hub Studio</p>
+            <div class="event-card__footer">
+              <div class="event-card__price">From<strong>$25</strong></div>
+              <a href="#" class="btn btn-light-vp btn-sm-pill">Book Now</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="event-card">
+          <div class="event-card__img">
+            <span class="event-card__badge event-card__badge--featured">Featured</span>
+            <img src="images/event-festival.png" alt="SunWave Festival 2024 crowd at sunset">
+          </div>
+          <div class="event-card__body">
+            <div class="event-card__date"><i class="fa-regular fa-calendar"></i>NOV 05 &bull; 2:00 PM</div>
+            <h3 class="event-card__title">SunWave Festival 2024</h3>
+            <p class="event-card__venue">Coastal Park Grounds</p>
+            <div class="event-card__footer">
+              <div class="event-card__price">From<strong>$120</strong></div>
+              <a href="#" class="btn btn-light-vp btn-sm-pill">Book Now</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="event-card">
+          <div class="event-card__img">
+            <img src="images/event-concert.png" alt="Live music show">
+          </div>
+          <div class="event-card__body">
+            <div class="event-card__date"><i class="fa-regular fa-calendar"></i>NOV 12 &bull; 8:00 PM</div>
+            <h3 class="event-card__title">Acoustic Sessions Live</h3>
+            <p class="event-card__venue">The Grand Hall</p>
+            <div class="event-card__footer">
+              <div class="event-card__price">From<strong>$60</strong></div>
+              <a href="#" class="btn btn-light-vp btn-sm-pill">Book Now</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <button class="vp-slider-arrow vp-slider-arrow--next js-trending-next" aria-label="Next">
+        <i class="fa-solid fa-chevron-right"></i>
+      </button>
+    </div>
+  </section>
+
+  <!-- ============ WHY CHOOSE VIBEPASS ============ -->
+  <section class="why-choose">
+    <div class="container-xxl">
+      <div class="why-choose__header">
+        <h2 class="section-title">Why Choose VibePass?</h2>
+      </div>
+
+      <div class="row g-4 why-choose__row">
+        <div class="col-md-4">
+          <div class="feature-card">
+            <div class="feature-card__icon"><i class="fa-solid fa-shield-halved"></i></div>
+            <h3 class="feature-card__title">Secure &amp; Verified Tickets</h3>
+            <p class="feature-card__text">Every ticket is 100% authentic and guaranteed to get you in, backed by our
+              trusted partners.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="feature-card">
+            <div class="feature-card__icon"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+            <h3 class="feature-card__title">No Hidden Fees</h3>
+            <p class="feature-card__text">What you see is what you pay. We believe in transparent pricing from selection
+              to checkout.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="feature-card">
+            <div class="feature-card__icon"><i class="fa-solid fa-headset"></i></div>
+            <h3 class="feature-card__title">24/7 Fan Support</h3>
+            <p class="feature-card__text">Our dedicated team is always on standby to ensure your event experience is
+              flawless.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ TESTIMONIALS ============ -->
+  <section class="testimonials container-xxl">
+    <div class="testimonials__header">
+      <h2 class="section-title">What Our Fans Say</h2>
+      <p class="section-subtitle">Don't just take our word for it.</p>
+    </div>
+
+    <div class="vp-slider-wrap">
+      <button class="vp-slider-arrow vp-slider-arrow--prev js-testimonial-prev" aria-label="Previous">
+        <i class="fa-solid fa-chevron-left"></i>
+      </button>
+
+      <div class="js-testimonial-slider">
+
+        <div class="testimonial-card">
+          <div class="testimonial-card__stars">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+              class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+          </div>
+          <p class="testimonial-card__quote">"VibePass made it incredibly easy to score tickets to the Neon Nights tour.
+            The checkout was seamless and transparent!"</p>
+          <div class="testimonial-card__author">
+            <img class="testimonial-card__avatar" src="https://i.pravatar.cc/150?img=47" alt="Sarah J.">
+            <div>
+              <p class="testimonial-card__name">Sarah J.</p>
+              <p class="testimonial-card__role">Concert Enthusiast</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="testimonial-card__stars">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+              class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+          </div>
+          <p class="testimonial-card__quote">"Best ticketing app hands down. I managed to get front row seats to the big
+            derby without any hidden service fees."</p>
+          <div class="testimonial-card__author">
+            <img class="testimonial-card__avatar" src="https://i.pravatar.cc/150?img=12" alt="Mike T.">
+            <div>
+              <p class="testimonial-card__name">Mike T.</p>
+              <p class="testimonial-card__role">Sports Fan</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="testimonial-card__stars">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+              class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+          </div>
+          <p class="testimonial-card__quote">"I love finding local art workshops through VibePass. The recommendations
+            are always spot on and the app is gorgeous."</p>
+          <div class="testimonial-card__author">
+            <img class="testimonial-card__avatar" src="https://i.pravatar.cc/150?img=32" alt="Elena R.">
+            <div>
+              <p class="testimonial-card__name">Elena R.</p>
+              <p class="testimonial-card__role">Creative Spirit</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="testimonial-card__stars">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+              class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+          </div>
+          <p class="testimonial-card__quote">"Customer support helped me transfer my tickets in minutes when my plans
+            changed. Genuinely painless."</p>
+          <div class="testimonial-card__author">
+            <img class="testimonial-card__avatar" src="https://i.pravatar.cc/150?img=15" alt="David K.">
+            <div>
+              <p class="testimonial-card__name">David K.</p>
+              <p class="testimonial-card__role">Festival Regular</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <button class="vp-slider-arrow vp-slider-arrow--next js-testimonial-next" aria-label="Next">
+        <i class="fa-solid fa-chevron-right"></i>
+      </button>
+    </div>
+  </section>
+
+  <!-- ============ FAQ ============ -->
+  <section class="faq container-xxl">
+    <div class="faq__header">
+      <h2 class="section-title">Frequently Asked Questions</h2>
+      <p class="section-subtitle">Everything you need to know about booking with VibePass.</p>
+    </div>
+
+    <div class="faq__list">
+      <div class="accordion vp-accordion" id="faqAccordion">
+        <div class="accordion-item">
+          <h3 class="accordion-header">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+              Are the tickets guaranteed?
+            </button>
+          </h3>
+          <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+            <div class="accordion-body">
+              Yes, every ticket purchased through VibePass is 100% guaranteed. We partner directly with official venues
+              and verified sellers to ensure your entry is seamless and secure.
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h3 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+              How do I receive my tickets?
+            </button>
+          </h3>
+          <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+            <div class="accordion-body">
+              Tickets are delivered instantly to your VibePass account and the email you registered with. You can access
+              mobile tickets any time from the app.
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h3 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+              Can I get a refund if my event is canceled?
+            </button>
+          </h3>
+          <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+            <div class="accordion-body">
+              Absolutely. If an event is canceled and not rescheduled, you'll automatically receive a full refund to
+              your original payment method.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ NEWSLETTER / APP CTA ============ -->
+  <section class="newsletter-cta">
+    <div class="newsletter-cta__inner">
+      <div class="row align-items-center g-4">
+        <div class="col-lg-7">
+          <h2 class="newsletter-cta__title">Never Miss a Beat</h2>
+          <p class="newsletter-cta__text">Subscribe to our newsletter for exclusive presale access, and download our app
+            for mobile-only deals and seamless entry.</p>
+
+          <form class="newsletter-input-group d-flex" style="max-width: 420px;">
+            <input type="email" class="form-control" placeholder="Enter your email address" required>
+            <button type="submit" class="btn btn-light-vp">Subscribe</button>
+          </form>
+
+          <div class="newsletter-cta__stores">
+            <a href="#" class="store-badge">
+              <i class="fa-brands fa-apple"></i>
+              <span><small>Download on the</small><strong>App Store</strong></span>
+            </a>
+            <a href="#" class="store-badge">
+              <i class="fa-brands fa-google-play"></i>
+              <span><small>GET IT ON</small><strong>Google Play</strong></span>
+            </a>
+          </div>
+        </div>
+
+        <div class="col-lg-5">
+          <div class="ticket-mock">
+            <div class="ticket-mock__inner">
+              <div class="ticket-mock__icon"><i class="fa-solid fa-ticket"></i></div>
+              <div class="ticket-mock__label">Your Ticket</div>
+              <div class="ticket-mock__qr">
+                <img src="images/ticket_qr.png" alt="">
+              </div>
+              <p class="ticket-mock__caption">Get your tickets on the same email you will provide</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="vp-footer">
+    <div class="container-xxl">
+      <div class="row g-4">
+        <div class="col-lg-4 col-md-6">
+          <div class="vp-footer__brand"><i class="fa-solid fa-bolt"></i>VibePass</div>
+          <p class="vp-footer__desc">Your gateway to unforgettable live experiences. From concerts to sports, we connect
+            you to the pulse of the city.</p>
+          <div class="vp-footer__socials">
+            <a href="#" aria-label="Website"><i class="fa-solid fa-globe"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" aria-label="Share"><i class="fa-solid fa-share-nodes"></i></a>
+            <a href="#" aria-label="Portfolio"><i class="fa-regular fa-images"></i></a>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-6 col-md-3">
+          <h4 class="vp-footer__heading">Discover</h4>
+          <ul class="vp-footer__links">
+            <li><a href="#">Concerts</a></li>
+            <li><a href="#">Sports</a></li>
+            <li><a href="#">Workshops</a></li>
+            <li><a href="#">Festivals</a></li>
+            <li><a href="#">Theater</a></li>
+            <li><a href="#">Venues</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-2 col-6 col-md-3">
+          <h4 class="vp-footer__heading">Company</h4>
+          <ul class="vp-footer__links">
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Press</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-4 col-md-12">
+          <h4 class="vp-footer__heading">Newsletter</h4>
+          <p class="vp-footer__desc">Stay updated with the latest events and exclusive offers.</p>
+          <form class="vp-footer__newsletter-form">
+            <input type="email" class="form-control" placeholder="Email address" required>
+            <button type="submit" class="btn btn-primary">Join</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="vp-footer__bottom d-flex flex-wrap justify-content-between">
+        <span>&copy; 2024 VibePass Entertainment Group. All rights reserved.</span>
+        <span>
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+          <a href="#">Cookie Settings</a>
+        </span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ============ SCRIPTS ============ -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>

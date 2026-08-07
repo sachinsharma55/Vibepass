@@ -1,0 +1,11 @@
+@import "../abstracts/variables";
+@import "../abstracts/mixins";
+
+.testimonials {
+  @include section-spacing(4.5rem, 4rem);
+
+  &__header {
+    text-align: center;
+    margin-bottom: 2.75rem;
+  }
+}

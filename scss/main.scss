@@ -1,0 +1,44 @@
+// =========================================================
+// VibePass — main.scss
+// Single compile entry point: sass scss/main.scss:css/main.css
+//
+// NOTE: this file uses @import (not @use) to chain partials together.
+// Reason: Dart Sass requires every @use rule in a file to appear before
+// any other rule — but we need our variables loaded, THEN Bootstrap
+// compiled with those overrides, THEN our own component/section CSS
+// layered on top, which is an interleaved order @use can't express in
+// one file. @import has no such restriction, so it's used here as the
+// "glue" file. Each individual partial still uses @use internally for
+// its own variables/mixins — that's unaffected by this.
+// =========================================================
+
+// 1. Abstracts
+//    Pulled in first so $vp-* variables AND the Bootstrap-variable
+//    overrides ($primary, $body-bg, etc.) exist before Bootstrap loads.
+@import "abstracts/variables";
+
+// 2. Bootstrap — requires `npm install` first (bootstrap lives in node_modules).
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+// 3. Base
+@import "base/reset";
+@import "base/typography";
+
+// 4. Layout
+@import "layout/header";
+@import "layout/footer";
+
+// 5. Components
+@import "components/buttons";
+@import "components/cards";
+@import "components/forms";
+@import "components/slick-overrides";
+
+// 6. Page sections
+@import "sections/hero";
+@import "sections/categories";
+@import "sections/trending";
+@import "sections/why-choose";
+@import "sections/testimonials";
+@import "sections/faq";
+@import "sections/newsletter";

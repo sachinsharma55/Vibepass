@@ -1,0 +1,27 @@
+@import "../abstracts/variables";
+@import "../abstracts/mixins";
+
+.trending {
+  @include section-spacing(2.5rem, 3rem);
+
+  &__header {
+    @include flex-between;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+  }
+
+  &__view-all {
+    color: $vp-primary;
+    font-weight: 600;
+    font-size: 0.95rem;
+
+    i { margin-left: 0.35rem; transition: transform 0.2s ease; }
+
+    &:hover i { transform: translateX(3px); }
+  }
+
+  @media screen and (max-width: 768px) {
+    padding-bottom: 5rem;
+  }
+}

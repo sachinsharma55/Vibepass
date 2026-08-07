@@ -1,0 +1,39 @@
+@import "../abstracts/variables";
+@import "../abstracts/mixins";
+
+.categories {
+  @include section-spacing(3.5rem, 2.5rem);
+  max-width: 900px;
+  margin: 0 auto;
+
+  &__item {
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    color: $vp-body-color;
+
+    &-icon {
+      @include icon-badge(72px, $vp-surface, $vp-primary);
+      margin: 0 auto 0.9rem;
+      box-shadow: $vp-shadow-sm;
+      border: 1px solid $vp-border;
+    }
+
+    &:hover &-icon {
+      background: $vp-primary;
+      color: #fff;
+      transform: translateY(-4px);
+      box-shadow: $vp-shadow-md;
+
+      &>img {
+        filter: brightness(0) invert(1);
+      }
+    }
+
+    &-label {
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: $vp-dark;
+    }
+  }
+}

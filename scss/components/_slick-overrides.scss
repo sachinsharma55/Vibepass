@@ -1,0 +1,109 @@
+@import "../abstracts/variables";
+
+// Base slick-theme.css handles arrows/dots by default; we hide those
+// and drive our own .vp-slider-arrow buttons + custom dots instead.
+
+.slick-slide {
+  height: auto;
+
+  @media screen and (min-width: 992px) {
+    .slick-slide>div {
+      height: 100%;
+    }
+  }
+}
+
+.slick-track {
+  display: flex !important;
+
+  .slick-slide {
+    display: flex !important;
+    height: auto;
+  }
+}
+
+.slick-list {
+  margin: 0 -0.6rem;
+  padding-bottom: 0.5rem;
+}
+
+.slick-dots {
+  position: relative;
+  bottom: auto;
+  margin-top: 1.5rem;
+
+  li {
+    width: 8px;
+    height: 8px;
+    margin: 0 4px;
+
+    button {
+      width: 8px;
+      height: 8px;
+      padding: 0;
+
+      &::before {
+        content: "";
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: $vp-border;
+        opacity: 1;
+      }
+    }
+
+    &.slick-active button::before {
+      background: $vp-primary;
+    }
+  }
+}
+
+// Wrapper that positions our custom prev/next buttons around a slider
+.vp-slider-wrap {
+  position: relative;
+
+  @media screen and (max-width: 1280px) {
+    padding: 0 4rem;
+  }
+
+  @media screen and (max-width: 992px) {
+    padding: 0;
+  }
+
+  .vp-slider-arrow {
+    position: absolute;
+    top: 40%;
+    transform: translateY(-50%);
+
+    &--prev {
+      left: -22px;
+    }
+
+    &--next {
+      right: -22px;
+    }
+
+    @media screen and (max-width: 1280px) {
+      &--prev {
+        left: 0;
+      }
+
+      &--next {
+        right: 0;
+      }
+    }
+
+    @media screen and (max-width: 992px) {
+      top: calc(100% + 10px);
+      transform: none;
+
+      &--prev {
+        left: calc(50% - 50px);
+      }
+
+      &--next {
+        right: calc(50% - 50px);
+      }
+    }
+  }
+}

@@ -1,0 +1,123 @@
+@import "../abstracts/variables";
+@import "../abstracts/mixins";
+
+// ---- Hero search bar ---------------------------------------------------
+.hero-search {
+  @include surface-card($vp-radius-lg, $vp-shadow-lg);
+  padding: 0.6rem;
+
+  &__field {
+    position: relative;
+    flex: 1;
+    min-width: 180px;
+
+    @media screen and (max-width: 768px) {
+      width: 100%;
+    }
+
+    i, &>img {
+      position: absolute;
+      left: 14px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: $vp-primary;
+      font-size: 0.95rem;
+      pointer-events: none;
+    }
+
+    select,
+    input {
+      border: none;
+      background: transparent;
+      padding: 0.6rem 1rem 0.6rem 2.6rem;
+      width: 100%;
+      font-size: 0.95rem;
+      color: $vp-dark;
+
+      &:focus {
+        outline: none;
+        box-shadow: none;
+        background: $vp-primary-light;
+        border-radius: $vp-radius-sm;
+      }
+    }
+  }
+
+  &__divider {
+    width: 1px;
+    align-self: stretch;
+    background: $vp-border;
+    margin-block: 0.5rem;
+  }
+
+  .btn-search {
+    background: $vp-primary;
+    color: #fff;
+    border: none;
+    border-radius: $vp-radius-md;
+    padding: 0.6rem 2rem;
+    font-weight: 600;
+    white-space: nowrap;
+
+    &:hover { background: $vp-primary-dark; }
+  }
+}
+
+// ---- Newsletter input group (CTA band + footer) ------------------------
+.newsletter-input-group {
+  input {
+    border: none;
+    padding: 0.85rem 1.25rem;
+    border-radius: $vp-radius-pill 0 0 $vp-radius-pill;
+
+    &:focus {
+      outline: none;
+      box-shadow: none;
+    }
+  }
+
+  button {
+    border-radius: 0 $vp-radius-pill $vp-radius-pill 0;
+    padding-inline: 1.75rem;
+    font-weight: 600;
+    border: none;
+  }
+}
+
+// ---- FAQ accordion -------------------------------------------------------
+.vp-accordion {
+  .accordion-item {
+    border: 1px solid $vp-border;
+    border-radius: $vp-radius-md !important;
+    margin-bottom: 0.9rem;
+    overflow: hidden;
+    background: $vp-surface;
+  }
+
+  .accordion-button {
+    font-weight: 600;
+    color: $vp-dark;
+    background: $vp-surface;
+    padding: 1.15rem 1.4rem;
+
+    &:not(.collapsed) {
+      color: $vp-primary;
+      background: $vp-primary-light;
+      box-shadow: none;
+    }
+
+    &:focus {
+      box-shadow: none;
+    }
+
+    &::after {
+      font-size: 0.9rem;
+    }
+  }
+
+  .accordion-body {
+    padding: 0 1.4rem 1.3rem;
+    color: $vp-muted;
+    font-size: 0.94rem;
+  }
+}

@@ -1,0 +1,129 @@
+@import "../abstracts/variables";
+@import "../abstracts/mixins";
+
+.newsletter-cta {
+  margin: 0 auto 5rem;
+  max-width: 1280px;
+  padding-inline: 1.5rem;
+
+  &__inner {
+    background: $vp-gradient-cta;
+    border-radius: $vp-radius-lg;
+    overflow: hidden;
+    padding: 2rem 3rem;
+    position: relative;
+    color: #fff;
+
+    &::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at 85% 20%, rgba(#fff, 0.12), transparent 55%);
+      pointer-events: none;
+    }
+  }
+
+  &__title {
+    font-size: clamp(1.6rem, 3vw, 2.1rem);
+    color: #fff;
+    margin-bottom: 0.75rem;
+  }
+
+  &__text {
+    color: rgba(#fff, 0.85);
+    max-width: 600px;
+    margin-bottom: 1.75rem;
+  }
+
+  &__stores {
+    display: flex;
+    gap: 0.75rem;
+    margin-top: 1.5rem;
+    flex-wrap: wrap;
+
+    .store-badge {
+      @include flex-center(0.5rem);
+      background: #000;
+      color: #fff;
+      border-radius: $vp-radius-sm;
+      padding: 0.5rem 1rem;
+      font-size: 0.8rem;
+      line-height: 1.1;
+
+      i {
+        font-size: 1.4rem;
+      }
+
+      small {
+        display: block;
+        font-size: 0.62rem;
+        opacity: 0.85;
+      }
+
+      strong {
+        display: block;
+        font-size: 0.88rem;
+      }
+    }
+  }
+}
+
+// ---- Ticket mockup (pure CSS, no image dependency) ----------------------
+.ticket-mock {
+  background: #F5F2FE;
+  color: $vp-dark;
+  border-radius: $vp-radius-md;
+  padding: 3rem 5px 5px;
+  width: 230px;
+  margin-inline: auto;
+  box-shadow: $vp-shadow-lg;
+  position: relative;
+  text-align: center;
+  border: 5px solid #F5F2FE;
+  transform: rotate(4deg);
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 80px;
+    height: 22px;
+    background: $white;
+    border-radius: 999px;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 10px;
+  }
+
+  &__inner {
+    background-color: $white;
+    padding: 1rem 0.5rem 0.5rem;
+    border-radius: 6px;
+  }
+
+  &__icon {
+    color: $vp-primary;
+    font-size: 1.6rem;
+    margin-bottom: 0.5rem;
+  }
+
+  &__label {
+    font-family: $vp-font-heading;
+    font-weight: 600;
+    font-size: 1.15rem;
+    margin-bottom: 1.1rem;
+    border-bottom: 1px dashed $vp-border;
+    padding-bottom: 1.1rem;
+  }
+
+  &__qr {
+    width: 110px;
+    height: 110px;
+    margin: 0 auto;
+  }
+
+  &__caption {
+    font-size: 0.72rem;
+    color: $vp-muted;
+    margin-bottom: 0;
+  }
+}
